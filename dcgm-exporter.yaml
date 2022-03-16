@@ -15,7 +15,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: "dcgm-exporter"
+  name: "dcgm-exporter-centaurusinfra"
   labels:
     app.kubernetes.io/name: "dcgm-exporter"
     app.kubernetes.io/version: "2.6.4"
@@ -34,7 +34,7 @@ spec:
       name: "dcgm-exporter"
     spec:
       containers:
-      - image: "nvcr.io/nvidia/k8s/dcgm-exporter:2.3.2-2.6.4-ubuntu20.04"
+      - image: "centaurusinfra/dcgm-exporter:2.3.4-2.6.4-ubuntu20.04"
         env:
         - name: "DCGM_EXPORTER_LISTEN"
           value: ":9400"

@@ -20,8 +20,8 @@ GOLANG_VERSION := 1.17
 VERSION        := 2.6.4
 FULL_VERSION   := $(DCGM_VERSION)-$(VERSION)
 OUTPUT         := type=oci,dest=/tmp/dcgm-exporter.tar
-PLATFORMS      := linux/amd64,linux/arm64
-DOCKERCMD      := docker buildx build
+PLATFORMS      := linux/amd64
+DOCKERCMD      := docker build
 
 NON_TEST_FILES  := pkg/dcgmexporter/dcgm.go pkg/dcgmexporter/gpu_collector.go pkg/dcgmexporter/parser.go
 NON_TEST_FILES  += pkg/dcgmexporter/pipeline.go pkg/dcgmexporter/server.go pkg/dcgmexporter/system_info.go
