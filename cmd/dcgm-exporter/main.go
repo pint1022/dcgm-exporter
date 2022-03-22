@@ -19,7 +19,7 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/NVIDIA/dcgm-exporter/pkg/dcgmexporter"
+	"github.com/pint1022/dcgm-exporter/pkg/dcgmexporter"
 	"os"
 	"os/signal"
 	"strconv"
